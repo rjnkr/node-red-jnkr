@@ -1,0 +1,22 @@
+{
+  "name": "node-red-contrib-minimum-on-time",
+  "version": "0.0.0",
+  "description": "Holds a true state for a minimum duration before allowing false",
+  "keywords": ["node-red"],
+  "node-red": {
+    "nodes": {
+      "minimum-on-time": "minimum-on-time.js"
+    }
+  },
+  "main": "minimum-on-time.js",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/rjnkr/node-red-jnkr.git",
+    "directory": "packages/node-red-contrib-minimum-on-time"
+  },
+  "files": [
+    "minimum-on-time.js",
+    "minimum-on-time.html"
+  ]
+}

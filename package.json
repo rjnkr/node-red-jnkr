@@ -1,0 +1,17 @@
+{
+  "name": "node-red-jnkr",
+  "private": true,
+  "version": "0.0.0",
+  "description": "Suite of custom Node-RED nodes",
+  "workspaces": [
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@changesets/cli": "^2.27.9"
+  },
+  "scripts": {
+    "changeset": "changeset",
+    "version": "changeset version",
+    "release": "changeset publish"
+  }
+}

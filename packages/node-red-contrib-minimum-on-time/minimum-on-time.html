@@ -1,0 +1,32 @@
+<script type="text/javascript">
+  RED.nodes.registerType('minimum-on-time', {
+    category: 'function',
+    color: '#a6bbcf',
+    defaults: {
+      name: { value: "" },
+      delayMs: { value: 30000, required: true, validate: RED.validators.number() }
+    },
+    inputs: 1,
+    outputs: 1,
+    icon: "timer.svg",
+    label: function () {
+      return this.name || "minimum-on-time";
+    }
+  });
+</script>
+
+<script type="text/html" data-template-name="minimum-on-time">
+  <div class="form-row">
+    <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+    <input type="text" id="node-input-name" placeholder="Name">
+  </div>
+  <div class="form-row">
+    <label for="node-input-delayMs"><i class="fa fa-clock-o"></i> Min on-time (ms)</label>
+    <input type="text" id="node-input-delayMs" placeholder="30000">
+  </div>
+</script>
+
+<script type="text/html" data-help-name="minimum-on-time">
+  <p>Holds a <code>true</code> state for a minimum duration before allowing <code>false</code> through.</p>
+  <p>If <code>false</code> arrives before the minimum time has elapsed, it is delayed until the remaining time runs out. If <code>true</code> arrives again before that, the pending false is cancelled.</p>
+</script>
